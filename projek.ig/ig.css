@@ -1,0 +1,47 @@
+/* Foto Profil */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+/* Grid Feed */
+.feed-post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Semua gambar seragam */
+.feed-img {
+  width: 100%;
+  height: 300px;     /* semua foto tinggi sama */
+  object-fit: cover; /* isi area tanpa distorsi */
+  border-radius: 8px;
+  display: block;
+}
+
+/* Overlay (like & comment) */  
+.feed-post .overlay {
+  position: absolute;
+  top: 0;       /* overlay nutup full dari atas */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.feed-post:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
